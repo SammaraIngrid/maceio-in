@@ -5,6 +5,21 @@ class EmployeesController < ApplicationController
     @employees = Employee.all.order(created_at: :desc)
   end
 
+  def new
+    @employee = Employee.new
+  end
+
+  def create
+    @employee = Employee.new(employees_params)
+    @employee.user = current_user
+
+    if @employee.save
+      redirect_to(employees_path, notice: 'Criado com sucesso')
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def edit; end
 
   def update

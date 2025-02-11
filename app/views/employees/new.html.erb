@@ -1,0 +1,29 @@
+<%= form_with(model: @employee, local: true) do |form| %>
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :name, "Nome", class: "form-label" %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Digite o Nome" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :department, "Setor", class: "form-label" %>
+      <%= form.text_field :department, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :email, "E-mail", class: "form-label" %>
+      <%= form.text_field :email, class: "form-control", placeholder: "Digite o E-mail" %>
+    </div>
+  </div>
+
+  <div class="row mb-4" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= button_tag "Criar", class: 'btn btn-custom' %>
+      <%= link_to 'Voltar', employees_path, class: 'btn btn-secondary ms-2' %>
+    </div>
+  </div>
+<% end %>
