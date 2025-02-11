@@ -15,6 +15,7 @@
         <td><%= employee.department %></td>
         <td><%= employee.email %></td>
       </tr>
+      <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
     <% end %>
   </tbody>
 </table>
