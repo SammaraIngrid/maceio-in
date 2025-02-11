@@ -30,6 +30,16 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def destroy
+    @employee = Employee.find(params[:id])
+
+    if @employee.destroy
+      redirect_to(employees_path, notice: 'Excluído com sucesso')
+    else
+      redirect_to(employees_path, notice: 'Não foi possível excluir')
+    end
+  end
+
   private 
 
   def set_employee

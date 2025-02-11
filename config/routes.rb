@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :employees, only: [:edit, :update, :index, :new, :create]
+  resources :employees, only: [:edit, :update, :index, :new, :create, :destroy]
+  #TO DO: Resolver o redirecionamento da rota DESTROY
 end
