@@ -1,0 +1,29 @@
+<h2 class="float-start mt-4" style="margin-right: 10px;">Maceió IN</h2>
+
+<div class="float-end mt-4 me-3">
+  <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
+    <i class="bi bi-plus-lg"></i> Criar um novo cadastro
+  <% end %>
+</div>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead style="background-color: #ffa500; color: white;">
+    <tr>
+      <th style="background-color: #ffa500; color: black;">Nome</th>
+      <th style="background-color: #ffa500; color: black;">Setor</th>
+      <th style="background-color: #ffa500; color: black;">E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr style="background-color: #0000ff ; color: white;">
+        <td><%= employee.name %></td>
+        <td><%= employee.department %></td>
+        <td><%= employee.email %></td>
+      </tr>
+      <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
+      <%= link_to('excluir', employees_path(employee), class: 'btn btn-sm', data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+
+    <% end %>
+  </tbody>
+</table>
