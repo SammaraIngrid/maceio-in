@@ -12,18 +12,20 @@
       <th style="background-color: #ffa500; color: black;">Nome</th>
       <th style="background-color: #ffa500; color: black;">Setor</th>
       <th style="background-color: #ffa500; color: black;">E-mail</th>
+      <th style="background-color: #ffa500; color: black;"></th>
     </tr>
   </thead>
   <tbody>
     <% @employees.each do |employee| %>
-      <tr style="background-color: #0000ff ; color: white;">
+      <tr>
         <td><%= employee.name %></td>
         <td><%= employee.translated_department %></td>
         <td><%= employee.email %></td>
+        <td>
+          <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
+          <%= link_to('excluir', employees_path(employee), class: 'btn btn-sm', data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+        </td>
       </tr>
-      <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
-      <%= link_to('excluir', employees_path(employee), class: 'btn btn-sm', data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
-
     <% end %>
   </tbody>
 </table>
