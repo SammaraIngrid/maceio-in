@@ -1,0 +1,11 @@
+# config/locales/pt-BR.yml
+pt-BR:
+  activerecord:
+    attributes:
+      employee:
+        department:
+          accounting: "Contabilidade"
+          finance: "Financeiro"
+          customer_service: "Atendimento"
+          budgeting: "Orçamento"
+          it: "TI"
