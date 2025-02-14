@@ -1,10 +1,6 @@
 <h2 class="float-start mt-4" style="margin-right: 10px;">Maceió IN</h2>
 
-<div class="float-end mt-4 me-3">
-  <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
-  <%= button_to "Sair", destroy_user_session_path, method: :delete %>
-  <% end %>
-</div>
+ <%= button_to "Sair", destroy_user_session_path, method: :delete, data: { turbo: false } %>
 
 <div class="float-end mt-4 me-3">
   <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
