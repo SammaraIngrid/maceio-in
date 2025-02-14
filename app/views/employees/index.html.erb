@@ -23,7 +23,7 @@
         <td><%= employee.email %></td>
         <td>
           <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
-          <%= link_to('excluir', employees_path(employee), class: 'btn btn-sm', data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+          <%= button_to 'Excluir', employee_path(employee), method: :delete, data: { turbo_confirm: "Tem certeza?" } %>
         </td>
       </tr>
     <% end %>
