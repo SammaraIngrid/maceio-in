@@ -2,6 +2,8 @@
 
 O **Maceió IN** é uma aplicação web desenvolvida com Ruby on Rails que permite aos usuários gerenciar os funcionários a partir de um simples CRUD. Também é possível visualizar informações básicas sobre a Secretária da Fazenda de Maceió (SEFAZ-AL).
 
+Apresentação do sistema: https://www.youtube.com/watch?v=hloKxRoY4-8&ab_channel=SAMMARATEIXEIRA
+
 
 # Instalação
 
