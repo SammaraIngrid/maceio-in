@@ -25,11 +25,11 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 - Passo 3: Instale o Rails com a versão do projeto:
 
-```gem install rails````
+```gem install rails```
 
 - Passo 4: Instale o yarn:
 
-```npm install yarn````
+```npm install yarn```
 
 - Passo 5: Instale as dependências do frontend:
 
