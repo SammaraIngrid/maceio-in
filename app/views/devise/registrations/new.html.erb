@@ -1,0 +1,26 @@
+<div class="signup-container">
+  <h2><%= t('devise.registrations.new.signup') %></h2>
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="mb-3">
+      <%= f.label :email, t('devise.registrations.new.email'), class: "form-label fw-bold" %>
+      <%= f.email_field :email, class: "form-control", required: true, autofocus: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password, t('devise.registrations.new.password'), class: "form-label fw-bold" %>
+      <%= f.password_field :password, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password_confirmation, t('devise.registrations.new.password_confirmation'), class: "form-label fw-bold" %>
+      <%= f.password_field :password_confirmation, class: "form-control", required: true %>
+    </div>
+
+    <%= f.submit t('devise.registrations.new.submit'), class: "btn btn-signup w-100" %>
+  <% end %>
+
+  <div class="text-center mt-3">
+    <%= link_to t('devise.registrations.new.already_have_account'), new_session_path(resource_name), class: "link-secondary" %>
+  </div>
+</div>
