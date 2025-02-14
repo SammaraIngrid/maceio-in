@@ -10,7 +10,8 @@
   <div class="row mb-3" style="margin-left: 10px;">
     <div class="col-md-6">
       <%= form.label :department, "Setor", class: "form-label" %>
-      <%= form.text_field :department, class: "form-control", placeholder: "Digite o Setor" %>
+      <%= form.select :department, Employee.departments.keys.map { |key| [I18n.t("activerecord.attributes.employee.department.#{key}"), key] }, include_blank: true %>
+
     </div>
   </div>
 
