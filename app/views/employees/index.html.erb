@@ -1,20 +1,19 @@
 <h2 class="float-start mt-4" style="margin-right: 10px;">Maceió IN</h2>
 
- <%= button_to "Sair", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-
 <div class="float-end mt-4 me-3">
-  <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
+  <%= link_to(new_employee_path, class: 'btn btn-blue') do %>
     <i class="bi bi-plus-lg"></i> Criar um novo cadastro
   <% end %>
 </div>
 
 <table class="table table-striped table-hover table-bordered">
-  <thead style="background-color: #ffa500; color: white;">
+  <thead>
     <tr>
-      <th style="background-color: #ffa500; color: black;">Nome</th>
-      <th style="background-color: #ffa500; color: black;">Setor</th>
-      <th style="background-color: #ffa500; color: black;">E-mail</th>
-      <th style="background-color: #ffa500; color: black;"></th>
+      <th class="table-header">Nome</th>
+      <th class="table-header">Setor</th>
+      <th class="table-header">E-mail</th>
+      <th class="table-header">Criado por</th>
+      <th class="table-header"></th>
     </tr>
   </thead>
   <tbody>
@@ -23,9 +22,10 @@
         <td><%= employee.name %></td>
         <td><%= employee.translated_department %></td>
         <td><%= employee.email %></td>
-        <td>
-          <%= link_to('editar', edit_employee_path(employee), class: 'btn btn-sm') %>
-          <%= button_to 'Excluir', employee_path(employee), method: :delete, data: { turbo_confirm: "Tem certeza?" } %>
+        <td><%= employee.user.email %></td>
+        <td class="d-inline-flex w-100">
+          <%= link_to('Editar', edit_employee_path(employee), class: 'btn btn-sm btn-orange') %>
+          <%= button_to 'Excluir', employee_path(employee), class: 'btn btn-sm btn-red', method: :delete, data: { turbo_confirm: "Tem certeza?" } %>
         </td>
       </tr>
     <% end %>
