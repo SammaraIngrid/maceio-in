@@ -2,6 +2,12 @@
 
 <div class="float-end mt-4 me-3">
   <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
+  <%= button_to "Sair", destroy_user_session_path, method: :delete %>
+  <% end %>
+</div>
+
+<div class="float-end mt-4 me-3">
+  <%= link_to(new_employee_path, class: 'btn btn-custom') do %>
     <i class="bi bi-plus-lg"></i> Criar um novo cadastro
   <% end %>
 </div>
