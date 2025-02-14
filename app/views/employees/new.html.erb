@@ -9,7 +9,7 @@
   <div class="row mb-3" style="margin-left: 10px;">
     <div class="col-md-6">
       <%= form.label :department, "Setor", class: "form-label" %>
-    <%= form.select :department, Employee.departments.keys.map { |key| [I18n.t("activerecord.attributes.employee.department.#{key}"), key] }, include_blank: true %>
+      <%= form.select :department, Employee.departments.keys.map { |key| [I18n.t("activerecord.attributes.employee.department.#{key}"), key] }, {}, { class: 'form-control', include_blank: true } %>
     </div>
   </div>
 
@@ -22,8 +22,8 @@
 
   <div class="row mb-4" style="margin-left: 10px;">
     <div class="col-md-6">
-      <%= button_tag "Criar", class: 'btn btn-custom' %>
       <%= link_to 'Voltar', employees_path, class: 'btn btn-secondary ms-2' %>
+      <%= button_tag "Criar", class: 'btn btn-blue' %>
     </div>
   </div>
 <% end %>

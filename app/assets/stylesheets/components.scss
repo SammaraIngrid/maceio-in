@@ -1,0 +1,21 @@
+@import './colors.scss';
+
+.btn-orange {
+  background-color: $default-orange;
+  color: white;
+}
+
+.btn-blue {
+  background-color: $default-blue;
+  color: white;
+}
+
+.btn-red {
+  background-color: $default-red;
+  color: white;
+}
+
+.table-header {
+  background-color: $default-orange;
+  color: black;
+}
